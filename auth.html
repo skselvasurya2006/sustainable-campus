@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1915">
+  <meta name="description" content="Sign in or register for EcoCampus, your campus sustainability community.">
+  <title>Join EcoCampus — Student Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-showcase">
+      <a class="auth-brand" href="auth.html"><span class="brand-mark"><svg viewBox="0 0 40 40"><path d="M31.7 7.2C18 7.1 8.3 12.6 8.3 23.1c0 5.8 4.3 9.4 9.2 9.4 10.3 0 14.8-11.2 14.2-25.3Z" fill="currentColor"/><path d="M7 33c5.8-9 12.1-13.7 21.7-19.2" fill="none" stroke="#d9f99d" stroke-width="2.5" stroke-linecap="round"/></svg></span><span>eco<span>campus</span><small>LIVE GREENER, TOGETHER</small></span></a>
+      <div class="showcase-copy">
+        <div class="auth-kicker"><i></i> YOUR CAMPUS. YOUR PLANET.</div>
+        <h1>Make your<br>campus <em>greener.</em></h1>
+        <p>Small actions add up. Join a community of students turning everyday choices into a lasting impact.</p>
+        <div class="showcase-stats">
+          <div><b>1,092</b><span>changemakers</span></div>
+          <div><b>8.4k L</b><span>water conserved</span></div>
+          <div><b>1.2t</b><span>CO₂ saved</span></div>
+        </div>
+      </div>
+      <div class="planet-scene" aria-hidden="true">
+        <div class="planet-glow"></div><div class="planet-ring ring-one"></div><div class="planet-ring ring-two"></div>
+        <div class="earth"><span class="continent continent-one"></span><span class="continent continent-two"></span><span class="continent continent-three"></span><span class="earth-shine"></span></div>
+        <span class="orbit-star star-one">✦</span><span class="orbit-star star-two">✧</span><span class="orbit-star star-three">✳</span>
+        <span class="leaf-float leaf-one">❋</span><span class="leaf-float leaf-two">✦</span>
+      </div>
+      <div class="showcase-foot"><span>✳</span> A BETTER TOMORROW STARTS HERE <span class="foot-line"></span></div>
+    </section>
+
+    <section class="auth-panel-wrap">
+      <div class="auth-panel">
+        <div class="mobile-brand"><span class="brand-mark"><svg viewBox="0 0 40 40"><path d="M31.7 7.2C18 7.1 8.3 12.6 8.3 23.1c0 5.8 4.3 9.4 9.2 9.4 10.3 0 14.8-11.2 14.2-25.3Z" fill="currentColor"/><path d="M7 33c5.8-9 12.1-13.7 21.7-19.2" fill="none" stroke="#d9f99d" stroke-width="2.5" stroke-linecap="round"/></svg></span><b>eco<span>campus</span></b></div>
+        <div class="panel-heading"><div class="eyebrow">STUDENT COMMUNITY</div><h2 id="authTitle">Welcome back.</h2><p id="authSubtitle">Sign in to continue your green journey.</p></div>
+        <div class="auth-tabs" role="tablist" aria-label="Choose access mode"><button type="button" class="auth-tab active" id="loginTab" role="tab" aria-selected="true">Log in</button><button type="button" class="auth-tab" id="registerTab" role="tab" aria-selected="false">Create account</button></div>
+        <div class="auth-alert" id="authAlert" role="alert"></div>
+        <form id="loginForm" class="auth-form">
+          <div class="input-field"><label for="loginEmail">College email</label><div class="input-wrap"><span>✉</span><input id="loginEmail" name="email" type="email" placeholder="you@college.edu" autocomplete="email" required></div></div>
+          <div class="input-field"><div class="label-row"><label for="loginPassword">Password</label><button type="button" class="tiny-link" id="showLoginPassword">Show</button></div><div class="input-wrap"><span>⌑</span><input id="loginPassword" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required></div></div>
+          <button class="auth-submit" type="submit">Log in to EcoCampus <span>↗</span></button>
+          <p class="auth-switch">New to the community? <button type="button" class="inline-link" data-switch="register">Create an account</button></p>
+        </form>
+        <form id="registerForm" class="auth-form hidden">
+          <div class="input-field"><label for="registerName">Full name</label><div class="input-wrap"><span>♙</span><input id="registerName" name="name" type="text" placeholder="Your full name" autocomplete="name" minlength="2" required></div></div>
+          <div class="input-field"><label for="registerEmail">College email</label><div class="input-wrap"><span>✉</span><input id="registerEmail" name="email" type="email" placeholder="you@college.edu" autocomplete="email" required></div></div>
+          <div class="input-field"><label for="registerDepartment">Department / programme</label><div class="input-wrap"><span>⌂</span><select id="registerDepartment" name="department" required><option value="">Select your department</option><option>Information Technology</option><option>Computer Science</option><option>Electronics & Communication</option><option>Electrical Engineering</option><option>Mechanical Engineering</option><option>Civil Engineering</option><option>Other</option></select></div></div>
+          <div class="input-field"><label for="registerStudentId">Register number</label><div class="input-wrap"><span>№</span><input id="registerStudentId" name="studentId" type="text" placeholder="Your college register number" required></div></div>
+          <div class="input-field"><label for="registerPassword">Create password</label><div class="input-wrap"><span>⌑</span><input id="registerPassword" name="password" type="password" placeholder="At least 8 characters" minlength="8" autocomplete="new-password" required></div><small class="field-hint">Use at least 8 characters.</small></div>
+          <div class="input-field"><label for="registerConfirm">Confirm password</label><div class="input-wrap"><span>⌑</span><input id="registerConfirm" name="confirm" type="password" placeholder="Enter password again" minlength="8" autocomplete="new-password" required></div></div>
+          <label class="terms-check"><input id="agreeTerms" type="checkbox" required><span>I agree to use EcoCampus respectfully and responsibly.</span></label>
+          <button class="auth-submit" type="submit">Create student account <span>↗</span></button>
+          <p class="auth-switch">Already registered? <button type="button" class="inline-link" data-switch="login">Log in</button></p>
+        </form>
+        <div class="security-note"><span>♧</span><p><b>Student access</b><br><small>This is a front-end demo. Accounts are stored only in this browser, not on a secure college server.</small></p></div>
+      </div>
+      <footer class="auth-footer"><span>© 2026 EcoCampus</span><span>Small actions. Lasting impact. <b>✳</b></span></footer>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>
